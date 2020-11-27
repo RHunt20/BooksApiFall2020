@@ -32,7 +32,8 @@ namespace BooksApi
 
             services.AddSingleton<BookService>();
 
-            services.AddControllers();
+            services.AddControllers()
+                .AddNewtonsoftJson(options => options.UseMemberCasing()); ;
 
         }
 
